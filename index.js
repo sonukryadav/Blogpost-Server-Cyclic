@@ -4,11 +4,8 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import * as dotenv from 'dotenv';
 dotenv.config({path :"./.env"});
-
 import postRoutes from './routes/posts.js'
 import userRoutes from './routes/user.js'
-
-
 
 const app = express();
 
@@ -28,5 +25,3 @@ mongoose
 	.then(console.log('Connected to MongoDB Database 🌐'))
 	.then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT} 🚀`)))
 	.catch((error) => console.log(`❎ Server did not connect ⚠️\n${error}`))
-
-
